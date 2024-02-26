@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-xl-8">
-                <h1 class="h1">Find your dream job</h1>
+                <h1 class="h1"> <i ></i> Find your dream job</h1>
                 <p class="auto-type"></p>
                 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
                 <script>
