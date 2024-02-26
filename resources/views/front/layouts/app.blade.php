@@ -101,39 +101,58 @@
     padding-right: 0;
     border-right: none;
 }
+
+
 	</style>	
 </head>
 <body data-instant-intensity="mousedown">
 <header>
 	<nav class="navbar navbar-expand-lg navbar-light bg-white shadow py-3" style="position: fixed; top: 0; width: 100%; z-index: 1000; padding-bottom: 70px;">
 		<div class="container">
-			<a class="navbar-brand" href="{{ route('home') }}">LARA-GIGS</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<a class="navbar-brand" href="{{ route('home') }}" style="color: hsla(172, 80%, 15%, 0.897);">
+				LARA-GIGS
+			</a>
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ms-0 ms-sm-0 me-auto mb-2 mb-lg-0 ms-lg-4">
 					<li class="nav-item">
-						<a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
-					</li>   
+						<a class="btn btn-primary" aria-current="page" href="{{ route('home') }}"  style="margin-right: 5px;">
+							<i class="fas fa-home"></i> Home
+						</a>
+											</li>   
 					<li class="nav-item">
-						<a class="nav-link" aria-current="page" href="{{ route('jobs') }}">Find Jobs</a>
-					</li>                                       
+						<a class="btn btn-primary" aria-current="page" href="{{ route('jobs') }}"  style="margin-right: 5px;">
+							<i class="fas fa-search"></i> Find Jobs
+						</a>
+											</li>   
+											<li class="nav-item">
+												<a class="btn btn-primary" href="{{ route('account.createJob') }}" type="submit">
+													<i class="fas fa-plus-circle"></i> Post a Job
+												</a></li>                                    
 				</ul>               
 				
 				@if (!Auth::check())
-				<a class="btn btn-outline-primary me-2" href="{{ route('account.login') }}" type="submit">Login</a>            
-				@else
+				<a class="btn btn-outline-primary me-2" href="{{ route('account.login') }}" type="submit">
+					<i class="fas fa-sign-in-alt"></i> Login
+				</a>
+				<a class="btn btn-outline-primary me-2" href="{{ route('account.registration') }}">
+					<i class="fas fa-sign-in-alt"></i> Register
+				</a>
+							  
+								@else
 					@if (Auth::user()->role == 'admin')
 					<a class="btn btn-outline-primary me-2" href="{{ route('admin.dashboard') }}" type="submit">Admin</a>                
 					@endif                
 					<a class="btn btn-outline-primary me-2" href="{{ route('account.profile') }}" type="submit">Account</a>            
 				@endif
 	
-				<a class="btn btn-primary" href="{{ route('account.createJob') }}" type="submit">Post a Job</a>
-			</div>
+				
+							</div>
 		</div>
 	</nav>
+	<br><br>
 	
 </header>
 

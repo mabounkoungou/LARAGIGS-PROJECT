@@ -58,7 +58,7 @@
                         </div>
 
                         <div class="mb-4">
-                            <h2>Experience</h2>
+                            <h2><i class="fas fa-user-tie"></i> Experience</h2>
                             <select name="experience" id="experience" class="form-control">
                                 <option value="">Select Experience</option>
                                 <option value="1" {{ (Request::get('experience') == 1) ? 'selected' : '' }}>1 Year</option>

@@ -97,7 +97,11 @@
                         looped:true
                     })
                 </script>
-                <div class="banner-btn mt-5"><a href="#" class="btn btn-primary mb-4 mb-sm-0">Explore Now</a></div>
+<div class="banner-btn mt-5">
+    <a href="#" class="btn btn-primary mb-4 mb-sm-0">
+        <i class="fas fa-search"></i> Explore Now
+    </a>
+</div>
             </div>
         </div>
     </div>
@@ -112,24 +116,33 @@
                         <input type="text" class="form-control" name="keyword" id="keyword" placeholder="Keywords">
                     </div>
                     <div class="col-md-3 mb-3 mb-sm-3 mb-lg-0">
-                        <input type="text" class="form-control" name="location" id="location" placeholder="Location">
+<div class="input-group">
+    <input type="text" class="form-control" name="location" id="location" placeholder="Location">
+    
+</div>
                     </div>
-                    <div class="col-md-3 mb-3 mb-sm-3 mb-lg-0">
-                        <select name="category" id="category" class="form-control">
-                            <option value="">Select a Category</option>
-                            @if ($newCategories->isNotEmpty())
-                                @foreach ($newCategories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name }}</option>  
-                                @endforeach
-                            @endif
-                        </select>
-                    </div>
+                   <div class="col-md-3 mb-3 mb-sm-3 mb-lg-0">
+    <div class="input-group">
+        <select name="category" id="category" class="form-control">
+            <option value="">Select a Category</option>
+            @if ($newCategories->isNotEmpty())
+                @foreach ($newCategories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>  
+                @endforeach
+            @endif
+        </select>
+     
+    </div>
+</div>
+
                     
                     <div class=" col-md-3 mb-xs-3 mb-sm-3 mb-lg-0">
                         <div class="d-grid gap-2">
                             {{-- <a href="jobs.html" class="btn btn-primary btn-block">Search</a> --}}
-                            <button type="submit" class="btn btn-primary btn-block">Search</button>
-                        </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="fas fa-search"></i> Search
+                            </button>
+                                                    </div>
                         
                     </div>
                 </div> 
@@ -148,7 +161,7 @@
             <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="single_catagory">
                     <a href="{{ route('jobs').'?category='.$category->id }}"><h4 class="pb-2">{{ $category->name }}</h4></a>
-                    <p class="mb-0"> <span>0</span> Available position</p>
+                    <p class="mb-0"> <span><i class="fas fa-user"></i> 0</span> Available position</p>
                 </div>
             </div> 
             @endforeach                
@@ -191,8 +204,10 @@
                                         </div>
     
                                         <div class="d-grid mt-3">
-                                            <a href="{{ route('jobDetail',$featuredJob->id) }}" class="btn btn-primary btn-lg">Details</a>
-                                        </div>
+                                            <a href="{{ route('jobDetail', $featuredJob->id) }}" class="btn btn-primary btn-lg">
+                                                <i class="fas fa-info-circle"></i> Details
+                                            </a>
+                                                                                    </div>
                                     </div>
                                 </div>
                             </div>
