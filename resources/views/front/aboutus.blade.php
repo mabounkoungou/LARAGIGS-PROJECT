@@ -155,7 +155,7 @@ a:hover, a:active {
                                 </div>
                                 <div class="feature-content">
                                     <h4>Reliable services</h4>
-                                    <p>Donec vitae sapien ut libero venenatis faucibu. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt</p>
+                                    <p>Donec vitae sapien ut hdhd libero venenatis faucibu. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt</p>
                                 </div>
                             </div>
                         </div>
