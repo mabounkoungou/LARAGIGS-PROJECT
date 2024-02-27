@@ -8408,7 +8408,7 @@ textarea.form-control {
 				        			<span class="fa fa-globe"></span>
 				        		</div>
 				        		<div class="text pl-3">
-					            <p><span>Website</span> <a href="#">site.com</a></p>
+					            <p><span>LARA-GIGS</span> <a href="{{ route('home') }}">LARAGIGS.com</a></p>
 					          </div>
 				          </div>
 			          </div>
