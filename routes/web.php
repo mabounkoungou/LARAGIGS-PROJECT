@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\JobApplicationController;
@@ -29,6 +30,8 @@ Route::get('/jobs',[JobsController::class,'index'])->name('jobs');
 Route::get('/jobs/detail/{id}',[JobsController::class,'detail'])->name('jobDetail');
 Route::post('/apply-job',[JobsController::class,'applyJob'])->name('applyJob');
 Route::post('/save-job',[JobsController::class,'saveJob'])->name('saveJob');
+Route::get('/aboutus',[AboutUsController::class,'aboutus'])->name('aboutus');
+
 
 Route::group(['prefix' => 'admin','middleware' => 'checkRole'], function(){
     Route::get('/dashboard',[DashboardController::class,'index'])->name('admin.dashboard');
@@ -71,6 +74,12 @@ Route::group(['prefix' => 'account'], function(){
         Route::get('/saved-jobs',[AccountController::class,'savedJobs'])->name('account.savedJobs');  
         Route::post('/remove-saved-job',[AccountController::class,'removeSavedJob'])->name('account.removeSavedJob');   
         Route::post('/update-password',[AccountController::class,'updatePassword'])->name('account.updatePassword');   
+
+    });
+    Route::prefix('google')->name('google.')->group(function () {
+        Route::get('auth',[AccountController::class,'loginUsinGoogle'])->name('login');
+        Route::any('callback',[AccountController::class,'callbackFromGoogle'])->name('callback');
+
 
     });
 

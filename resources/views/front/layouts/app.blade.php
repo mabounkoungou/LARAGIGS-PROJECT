@@ -11,13 +11,11 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.27.3/ui/trumbowyg.min.css" integrity="sha512-Fm8kRNVGCBZn0sPmwJbVXlqfJmPC13zRsMElZenX6v721g/H7OukJd8XzDEBRQ2FSATK8xNF9UYvzsCtUpfeJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}" />	
-	<!-- Fav Icon -->
-	<link rel="shortcut icon" type="image/x-icon" href="#" />
+	<link rel="shortcut icon" href="{{ asset('assets/fav/favicon.png') }}" type="image/x-icon">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 <style>
 
-/********** Template CSS **********/
 :root {
     --primary: hsla(172, 80%, 15%, 0.897);;
     --secondary: #114d5c;
@@ -200,27 +198,13 @@
 			</div>
 			<div class="col-md-6 col-lg-3">
 				<h4 class="text-white mb-4">Quick Link</h4>
-				<a class="btn btn-link" href="">About Us</a>
+				<a class="btn btn-link" href="{{ route('aboutus') }}">About Us</a>
 				<a class="btn btn-link" href="">Contact Us</a>
 				<a class="btn btn-link" href="">Privacy Policy</a>
 				<a class="btn btn-link" href="">Terms & Condition</a>
 				<a class="btn btn-link" href="">Career</a>
 			</div>
-			<div class="col-md-6 col-lg-3">
-				<h4 class="text-white mb-4">Popular Link</h4>
-				<a class="btn btn-link" href="">About Us</a>
-				<a class="btn btn-link" href="">Contact Us</a>
-				<a class="btn btn-link" href="">Privacy Policy</a>
-				<a class="btn btn-link" href="">Terms & Condition</a>
-				<a class="btn btn-link" href="">Career</a>
-			</div>
-			<div class="col-md-6 col-lg-3">
-				<h4 class="text-white mb-4">Newsletter</h4>
-				<p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
-					vulpu
-				</p>
-				
-			</div>
+			
 		</div>
 	</div>
 	<div class="container px-lg-5">

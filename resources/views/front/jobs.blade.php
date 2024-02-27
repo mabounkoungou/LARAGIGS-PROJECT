@@ -75,7 +75,7 @@
                             </select>
                         </div> 
                         
-                        <button type="submit" class="btn btn-primary">Search</button>
+                        <button type="submit" class="btn btn-primary"> <i fas fa-search></i>Search</button>
                         <a href="{{ route("jobs") }}" class="btn btn-secondary mt-3">Reset</a>
                     </div>
                 </form>

@@ -7,29 +7,29 @@
         <div class="row d-flex justify-content-center">
             <div class="col-md-5">
                 <div class="card shadow border-0 p-5">
-                    <h1 class="h3">Register</h1>
+                    <h1 class="h3" style="color: hsla(172, 80%, 15%, 0.897); text-align:center">SignUp Here</h1>
                     <form action="" name="registrationForm" id="registrationForm">
                         <div class="mb-3">
-                            <label for="" class="mb-2">Name*</label>
+                            <label for="" class="mb-2">Name<span style="color: red;">*</span></label>
                             <input type="text" name="name" id="name" class="form-control" placeholder="Enter Name">
                             <p></p>
                         </div> 
                         <div class="mb-3">
-                            <label for="" class="mb-2">Email*</label>
+                            <label for="" class="mb-2">Email<span style="color: red;">*</span></label>
                             <input type="text" name="email" id="email" class="form-control" placeholder="Enter Email">
                             <p></p>
                         </div> 
                         <div class="mb-3">
-                            <label for="" class="mb-2">Password*</label>
+                            <label for="" class="mb-2">Password<span style="color: red;">*</span></label>
                             <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password">
                             <p></p>
                         </div> 
                         <div class="mb-3">
-                            <label for="" class="mb-2">Confirm Password*</label>
+                            <label for="" class="mb-2">Confirm Password<span style="color: red;">*</span></label>
                             <input type="password" name="confirm_password" id="confirm_password" class="form-control" placeholder="Please confirm Password">
                             <p></p>
                         </div> 
-                        <button class="btn btn-primary mt-2">Register</button>
+                        <button class="btn btn-primary mt-2">SignUp</button>
                     </form>                    
                 </div>
                 <div class="mt-4 text-center">
