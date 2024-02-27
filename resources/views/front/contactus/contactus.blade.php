@@ -8342,7 +8342,7 @@ textarea.form-control {
 									<h3 class="mb-4">Get in touch</h3>
 									<div id="form-message-warning" class="mb-4"></div>
 				      		<div id="form-message-success" class="mb-4">
-				            Your message was sent, thank you!
+				            Your message was sent,thank you!
 				      		</div>
 									<form method="POST" id="contactForm" name="contactForm">
 										<div class="row">
