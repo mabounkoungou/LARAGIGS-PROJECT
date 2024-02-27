@@ -10,7 +10,7 @@
 	<meta name="csrf-token" content="{{ csrf_token() }}" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.27.3/ui/trumbowyg.min.css" integrity="sha512-Fm8kRNVGCBZn0sPmwJbVXlqfJmPC13zRsMElZenX6v721g/H7OukJd8XzDEBRQ2FSATK8xNF9UYvzsCtUpfeJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}" />	
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}" />
 	<link rel="shortcut icon" href="{{ asset('assets/fav/favicon.png') }}" type="image/x-icon">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -21,6 +21,7 @@
     --secondary: #114d5c;
     --light: #F0F6FF;
     --dark: #074549;
+    
 }
 
 /*** Footer ***/
@@ -101,7 +102,7 @@
 }
 
 
-	</style>	
+	</style>
 </head>
 <body data-instant-intensity="mousedown">
 <header>
@@ -119,18 +120,18 @@
 						<a class="btn btn-primary" aria-current="page" href="{{ route('home') }}"  style="margin-right: 5px;">
 							<i class="fas fa-home"></i> Home
 						</a>
-											</li>   
+											</li>
 					<li class="nav-item">
 						<a class="btn btn-primary" aria-current="page" href="{{ route('jobs') }}"  style="margin-right: 5px;">
 							<i class="fas fa-search"></i> Find Jobs
 						</a>
-											</li>   
+											</li>
 											<li class="nav-item">
 												<a class="btn btn-primary" href="{{ route('account.createJob') }}" type="submit">
 													<i class="fas fa-plus-circle"></i> Post a Job
-												</a></li>                                    
-				</ul>               
-				
+												</a></li>
+				</ul>
+
 				@if (!Auth::check())
 				<a class="btn btn-outline-primary me-2" href="{{ route('account.login') }}" type="submit">
 					<i class="fas fa-sign-in-alt"></i> Login
@@ -138,20 +139,20 @@
 				<a class="btn btn-outline-primary me-2" href="{{ route('account.registration') }}">
 					<i class="fas fa-sign-in-alt"></i> Register
 				</a>
-							  
+
 								@else
 					@if (Auth::user()->role == 'admin')
-					<a class="btn btn-outline-primary me-2" href="{{ route('admin.dashboard') }}" type="submit">Admin</a>                
-					@endif                
-					<a class="btn btn-outline-primary me-2" href="{{ route('account.profile') }}" type="submit">Account</a>            
+					<a class="btn btn-outline-primary me-2" href="{{ route('admin.dashboard') }}" type="submit">Admin</a>
+					@endif
+					<a class="btn btn-outline-primary me-2" href="{{ route('account.profile') }}" type="submit">Account</a>
 				@endif
-	
-				
+
+
 							</div>
 		</div>
 	</nav>
 	<br><br>
-	
+
 </header>
 
 @yield('main')
@@ -173,7 +174,7 @@
             <div class="d-flex justify-content-end">
                 <button type="submit" class="btn btn-primary mx-3">Update</button>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>            
+            </div>
         </form>
       </div>
     </div>
@@ -204,7 +205,7 @@
 				<a class="btn btn-link" href="">Terms & Condition</a>
 				<a class="btn btn-link" href="">Career</a>
 			</div>
-			
+
 		</div>
 	</div>
 	<div class="container px-lg-5">
