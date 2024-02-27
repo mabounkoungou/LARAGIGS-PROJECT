@@ -21,7 +21,7 @@
     --secondary: #114d5c;
     --light: #F0F6FF;
     --dark: #074549;
-    
+
 }
 
 /*** Footer ***/
@@ -200,7 +200,7 @@
 			<div class="col-md-6 col-lg-3">
 				<h4 class="text-white mb-4">Quick Link</h4>
 				<a class="btn btn-link" href="{{ route('aboutus') }}">About Us</a>
-				<a class="btn btn-link" href="">Contact Us</a>
+				<a class="btn btn-link" href="{{ route('contactus') }}">Contact Us</a>
 				<a class="btn btn-link" href="">Privacy Policy</a>
 				<a class="btn btn-link" href="">Terms & Condition</a>
 				<a class="btn btn-link" href="">Career</a>
