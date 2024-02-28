@@ -117,7 +117,7 @@ a:hover, a:active {
 }
 
 </style>
-    <title>AboutUs</title>
+    <title>PrivacyPolicy</title>
 </head>
 <!DOCTYPE html>
 <html class="no-js" lang="en_AU" />
