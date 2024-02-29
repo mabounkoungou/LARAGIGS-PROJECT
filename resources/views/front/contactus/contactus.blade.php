@@ -6455,7 +6455,7 @@ button.bg-dark:focus {
   left: 0;
   z-index: 1030; }
 
-@supports ((position: -webkit-sticky) or (position: sticky)) {
+@supports  (position: sticky) {
   .sticky-top {
     position: -webkit-sticky;
     position: sticky;
