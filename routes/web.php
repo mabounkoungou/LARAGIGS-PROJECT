@@ -10,6 +10,7 @@ use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JobsController;
 use App\Http\Controllers\PrivacyPolicyController;
+use App\Http\Controllers\PrivateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,6 +36,7 @@ Route::post('/save-job',[JobsController::class,'saveJob'])->name('saveJob');
 Route::get('/aboutus',[AboutUsController::class,'aboutus'])->name('aboutus');
 Route::get('/contactus/contactus',[ContactUsController::class,'contactus'])->name('contactus');
 Route::get('/privacypolicy',[PrivacyPolicyController::class,'privacypolicy'])->name('privacypolicy');
+Route::get('/private',[PrivateController::class,'private'])->name('private');
 
 
 
