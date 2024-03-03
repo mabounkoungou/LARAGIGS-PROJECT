@@ -31,37 +31,37 @@
                                 <p class="invalid-feedback">{{ $message }}</p>
                             @enderror
 
-                        </div> 
+                        </div>
                         <div class="mb-3">
                             <label for="" class="mb-2">Password<span style="color: red;">*</span></label>
                             <input type="password" name="password" id="password" class="form-control  @error('password') is-invalid @enderror" placeholder="Enter Password">
-                        
+
                             @error('password')
                                 <p class="invalid-feedback">{{ $message }}</p>
                             @enderror
-                        </div> 
+                        </div>
                         <div class="justify-content-between d-flex">
                         <button class="btn btn-primary mt-2">Login</button>
-                            <a href="forgot-password.html" class="mt-3">Forgot Password?</a>
+                            <a href="{{ route('account.forgotPassword') }}" class="mt-3">Forgot Password?</a>
                         </div>
-                    </form>                    
+                    </form>
                 </div>
                 <br>
                 <div class="google">
-                    
+
                                       <button class="btn btn-primary" style="width: 100%; background-color: hsla(172, 80%, 15%, 0.897);"><span><i class="fab fa-google" style="color: #4285F4; font-size: 24px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);"></i>
                                       </span>Login With Google</button>
-            
+
                 </div>
                 <div class="mt-4 text-center">
                     <p>Do not have an account? <a  href="{{ route('account.registration') }}">Register</a></p>
                 </div>
 
-   
+
             </div>
         </div>
         <div class="py-lg-5">&nbsp;</div>
-        
+
     </div>
 </section>
 @endsection
