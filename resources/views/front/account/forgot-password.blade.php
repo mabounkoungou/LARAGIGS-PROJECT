@@ -32,14 +32,7 @@
                             @enderror
 
                         </div>
-                        <div class="mb-3">
-                            <label for="" class="mb-2">Password<span style="color: red;">*</span></label>
-                            <input type="password" name="password" id="password" class="form-control  @error('password') is-invalid @enderror" placeholder="Enter Password">
-
-                            @error('password')
-                                <p class="invalid-feedback">{{ $message }}</p>
-                            @enderror
-                        </div>
+                        
                         <div class="justify-content-between d-flex">
                         <button class="btn btn-primary mt-2">Login</button>
                             <a href="forgot-password.html" class="mt-3">Forgot Password?</a>
@@ -53,7 +46,7 @@
                                       </span>Login With Google</button>
 
                 </div>
-                
+
 
             </div>
         </div>
