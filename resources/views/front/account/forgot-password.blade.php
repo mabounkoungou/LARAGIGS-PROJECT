@@ -53,10 +53,7 @@
                                       </span>Login With Google</button>
 
                 </div>
-                <div class="mt-4 text-center">
-                    <p>Do not have an account? <a  href="{{ route('account.registration') }}">Register</a></p>
-                </div>
-
+                
 
             </div>
         </div>
