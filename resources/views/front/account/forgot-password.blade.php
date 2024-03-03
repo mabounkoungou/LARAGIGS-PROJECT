@@ -20,7 +20,7 @@
         <div class="row d-flex justify-content-center">
             <div class="col-md-5">
                 <div class="card shadow border-0 p-5">
-                    <h1 class="h3" style="color: hsla(172, 80%, 15%, 0.897); text-align:center">Login</h1>
+                    <h1 class="h3" style="color: hsla(172, 80%, 15%, 0.897); text-align:center">Forgot Password</h1>
                     <form action="{{ route('account.authenticate') }}" method="post">
                         @csrf
                         <div class="mb-3">
