@@ -32,7 +32,7 @@
                             @enderror
 
                         </div>
-                        
+
                         <div class="justify-content-between d-flex">
                         <button class="btn btn-primary mt-2">Login</button>
                             <a href="forgot-password.html" class="mt-3">Forgot Password?</a>
@@ -40,12 +40,7 @@
                     </form>
                 </div>
                 <br>
-                <div class="google">
-
-                                      <button class="btn btn-primary" style="width: 100%; background-color: hsla(172, 80%, 15%, 0.897);"><span><i class="fab fa-google" style="color: #4285F4; font-size: 24px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);"></i>
-                                      </span>Login With Google</button>
-
-                </div>
+              
 
 
             </div>
