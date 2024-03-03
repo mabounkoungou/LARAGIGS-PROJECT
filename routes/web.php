@@ -37,6 +37,8 @@ Route::get('/aboutus',[AboutUsController::class,'aboutus'])->name('aboutus');
 Route::get('/contactus/contactus',[ContactUsController::class,'contactus'])->name('contactus');
 Route::get('/privacypolicy',[PrivacyPolicyController::class,'privacypolicy'])->name('privacypolicy');
 Route::get('/private',[PrivateController::class,'private'])->name('private');
+Route::get('/forgot-password',[AccountController::class,'forgotPassword'])->name('account.forgotPassword');
+
 
 
 

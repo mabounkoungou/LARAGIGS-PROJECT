@@ -61,7 +61,7 @@ class AccountController extends Controller
         return view('front.account.login');
     }
 
-   
+
 
     public function authenticate(Request $request) {
         $validator = Validator::make($request->all(),[
@@ -70,7 +70,7 @@ class AccountController extends Controller
         ]);
 
         if ($validator->passes()) {
-            
+
             if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
                 return redirect()->route('account.profile');
             } else {
@@ -85,7 +85,7 @@ class AccountController extends Controller
 
     public function profile() {
 
-        
+
         $id = Auth::user()->id;
 
         $user = User::where('id',$id)->first();
@@ -203,7 +203,7 @@ class AccountController extends Controller
             'vacancy' => 'required|integer',
             'location' => 'required|max:50',
             'description' => 'required',
-            'company_name' => 'required|min:3|max:75',          
+            'company_name' => 'required|min:3|max:75',
 
         ];
 
@@ -245,17 +245,17 @@ class AccountController extends Controller
         }
     }
 
-    public function myJobs() {    
+    public function myJobs() {
         $jobs = Job::where('user_id',Auth::user()->id)->with('jobType')
 
-                    ->orderBy('created_at','DESC')->paginate(10);        
+                    ->orderBy('created_at','DESC')->paginate(10);
         return view('front.account.job.my-jobs',[
             'jobs' => $jobs
         ]);
-    }  
+    }
 
     public function editJob(Request $request, $id) {
-        
+
         $categories = Category::orderBy('name','ASC')->where('status',1)->get();
         $jobTypes = JobType::orderBy('name','ASC')->where('status',1)->get();
 
@@ -284,7 +284,7 @@ class AccountController extends Controller
             'vacancy' => 'required|integer',
             'location' => 'required|max:50',
             'description' => 'required',
-            'company_name' => 'required|min:3|max:75',          
+            'company_name' => 'required|min:3|max:75',
 
         ];
 
@@ -362,14 +362,14 @@ class AccountController extends Controller
 
     public function removeJobs(Request $request){
         $jobApplication = JobApplication::where([
-                                    'id' => $request->id, 
+                                    'id' => $request->id,
                                     'user_id' => Auth::user()->id]
                                 )->first();
-        
+
         if ($jobApplication == null) {
             session()->flash('error','Job application not found');
             return response()->json([
-                'status' => false,                
+                'status' => false,
             ]);
         }
 
@@ -377,7 +377,7 @@ class AccountController extends Controller
         session()->flash('success','Job application removed successfully.');
 
         return response()->json([
-            'status' => true,                
+            'status' => true,
         ]);
 
     }
@@ -400,14 +400,14 @@ class AccountController extends Controller
 
     public function removeSavedJob(Request $request){
         $savedJob = SavedJob::where([
-                                    'id' => $request->id, 
+                                    'id' => $request->id,
                                     'user_id' => Auth::user()->id]
                                 )->first();
-        
+
         if ($savedJob == null) {
             session()->flash('error','Job not found');
             return response()->json([
-                'status' => false,                
+                'status' => false,
             ]);
         }
 
@@ -415,7 +415,7 @@ class AccountController extends Controller
         session()->flash('success','Job removed successfully.');
 
         return response()->json([
-            'status' => true,                
+            'status' => true,
         ]);
 
     }
@@ -437,19 +437,22 @@ class AccountController extends Controller
         if (Hash::check($request->old_password, Auth::user()->password) == false){
             session()->flash('error','Your old password is incorrect.');
             return response()->json([
-                'status' => true                
+                'status' => true
             ]);
         }
 
 
         $user = User::find(Auth::user()->id);
-        $user->password = Hash::make($request->new_password);  
+        $user->password = Hash::make($request->new_password);
         $user->save();
 
         session()->flash('success','Password updated successfully.');
         return response()->json([
-            'status' => true                
+            'status' => true
         ]);
 
+    }
+    public function forgotPassword(){
+        return view('front.account.forgot-password');
     }
 }
