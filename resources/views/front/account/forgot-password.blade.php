@@ -21,7 +21,7 @@
             <div class="col-md-5">
                 <div class="card shadow border-0 p-5">
                     <h1 class="h3" style="color: hsla(172, 80%, 15%, 0.897); text-align:center">Forgot Password</h1>
-                    <form action="{{ route('account.authenticate') }}" method="post">
+                    <form action="{{ route('account.processForgotPassword') }}" method="post">
                         @csrf
                         <div class="mb-3">
                             <label for="" class="mb-2">Email<span style="color: red;">*</span></label>
@@ -34,7 +34,7 @@
                         </div>
 
                         <div class="justify-content-between d-flex">
-                        <button class="btn btn-primary mt-2">Reset Password</button>
+                        <button class="btn btn-primary mt-2">Submit</button>
                         </div>
                     </form>
                 </div>

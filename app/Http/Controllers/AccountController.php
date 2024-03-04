@@ -383,9 +383,9 @@ class AccountController extends Controller
     }
 
     public function savedJobs(){
-        // $jobApplications = JobApplication::where('user_id',Auth::user()->id)
-        //         ->with(['job','job.jobType','job.applications'])
-        //         ->paginate(10);
+         $jobApplications = JobApplication::where('user_id',Auth::user()->id)
+             ->with(['job','job.jobType','job.applications'])
+             ->paginate(10);
 
         $savedJobs = SavedJob::where([
             'user_id' => Auth::user()->id
@@ -454,5 +454,13 @@ class AccountController extends Controller
     }
     public function forgotPassword(){
         return view('front.account.forgot-password');
+    }
+    public function processForgotPassword(Request $request){
+        $validator = Validator::make($request->all(),[
+            'email' => 'required|email|exists:users,email'
+        ]);
+        if($validator->fails()){
+            return redirect()->route('account.forgotPassword')->withInput()->withErrors($validator);
+        }
     }
 }

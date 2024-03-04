@@ -38,6 +38,7 @@ Route::get('/contactus/contactus',[ContactUsController::class,'contactus'])->nam
 Route::get('/privacypolicy',[PrivacyPolicyController::class,'privacypolicy'])->name('privacypolicy');
 Route::get('/private',[PrivateController::class,'private'])->name('private');
 Route::get('/forgot-password',[AccountController::class,'forgotPassword'])->name('account.forgotPassword');
+Route::post('/processforgot-password',[AccountController::class,'processForgotPassword'])->name('account.processForgotPassword');
 
 
 
