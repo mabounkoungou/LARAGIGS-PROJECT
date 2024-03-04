@@ -17,7 +17,7 @@
 <style>
 
 :root {
-    --primary: hsla(172, 80%, 15%, 0.897);;
+    --primary: hsla(172, 80%, 15%, 0.897);
     --secondary: #114d5c;
     --light: #F0F6FF;
     --dark: #074549;
