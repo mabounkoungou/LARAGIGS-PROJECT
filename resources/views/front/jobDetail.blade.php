@@ -1,7 +1,7 @@
 @extends('front.layouts.app')
 
 @section('main')
-<section class="section-4 bg-2">    
+<section class="section-4 bg-2">
     <div class="container pt-5">
         <div class="row">
             <div class="col">
@@ -11,7 +11,7 @@
                     </ol>
                 </nav>
             </div>
-        </div> 
+        </div>
     </div>
     <div class="container job_details_area">
         <div class="row pb-5">
@@ -21,7 +21,7 @@
                     <div class="job_details_header">
                         <div class="single_jobs white-bg d-flex justify-content-between">
                             <div class="jobs_left d-flex align-items-center">
-                                
+
                                 <div class="jobs_conetent">
                                     <a href="#">
                                         <h4>{{ $job->title }}</h4>
@@ -47,8 +47,8 @@
                         <div class="single_wrap">
                             <h4>Job description</h4>
                             {!! nl2br($job->description) !!}
-                            
-                            
+
+
                         </div>
                         @if (!empty($job->responsibility))
                         <div class="single_wrap">
@@ -70,9 +70,9 @@
                         @endif
                         <div class="border-bottom"></div>
                         <div class="pt-3 text-end">
-                            
+
                             @if (Auth::check())
-                                <a href="#" onclick="saveJob({{ $job->id }});" class="btn btn-secondary">Save</a>  
+                                <a href="#" onclick="saveJob({{ $job->id }});" class="btn btn-secondary">Save</a>
                             @else
                                 <a href="javascript:void(0);" class="btn btn-secondary disabled">Login to Save</a>
                             @endif
@@ -82,7 +82,7 @@
                             @else
                                 <a href="javascript:void(0);" class="btn btn-primary disabled">Login to Apply</a>
                             @endif
-                            
+
 
                         </div>
                     </div>
@@ -90,15 +90,15 @@
 
                 @if (Auth::user())
                    @if (Auth::user()->id == $job->user_id)
-                       
-                   
-                
+
+
+
                 <div class="card shadow border-0 mt-4">
                     <div class="job_details_header">
                         <div class="single_jobs white-bg d-flex justify-content-between">
                             <div class="jobs_left d-flex align-items-center">
-                                <div class="jobs_conetent">                                    
-                                    <h4>Applicants</h4>                                    
+                                <div class="jobs_conetent">
+                                    <h4>Applicants</h4>
                                 </div>
                             </div>
                             <div class="jobs_right"></div>
@@ -121,19 +121,19 @@
                                     <td>
                                         {{ \Carbon\Carbon::parse($application->applied_date)->format('d M, Y') }}
                                     </td>
-                                </tr> 
+                                </tr>
                                 @endforeach
                                 @else
                                 <tr>
                                     <td colspan="3">Applicants not found</td>
                                 </tr>
                             @endif
-                            
+
                         </table>
-                        
+
                     </div>
                 </div>
-                @endif 
+                @endif
                 @endif
             </div>
             <div class="col-md-4">
@@ -146,7 +146,7 @@
                             <ul>
                                 <li>Published on: <span>{{ \Carbon\Carbon::parse($job->created_at)->format('d M, Y') }}</span></li>
                                 <li>Vacancy: <span>{{ $job->vacancy }}</span></li>
-                                
+
 
                                 @if (!empty($job->salary))
                                 <li>Salary: <span>{{ $job->salary }}</span></li>
@@ -197,7 +197,7 @@ function applyJob(id){
             dataType: 'json',
             success: function(response) {
                 window.location.href = "{{ url()->current() }}";
-            } 
+            }
         });
     }
 }
@@ -210,7 +210,7 @@ function saveJob(id){
         dataType: 'json',
         success: function(response) {
             window.location.href = "{{ url()->current() }}";
-        } 
+        }
     });
 }
 </script>

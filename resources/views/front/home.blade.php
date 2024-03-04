@@ -9,7 +9,7 @@
                 <p class="auto-type"></p>
                 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
                 <script>
-                    
+
                     var typed = new Typed(".auto-type",{
                         strings : [
     "As a software engineer, staying updated with the latest programming languages and frameworks is crucial for professional growth.",
@@ -107,7 +107,7 @@
     </div>
 </section>
 
-<section class="section-1 py-5 "> 
+<section class="section-1 py-5 ">
     <div class="container">
         <div class="card border-0 shadow p-5">
             <form action="{{ route("jobs") }}" method="GET">
@@ -118,7 +118,7 @@
                     <div class="col-md-3 mb-3 mb-sm-3 mb-lg-0">
 <div class="input-group">
     <input type="text" class="form-control" name="location" id="location" placeholder="Location">
-    
+
 </div>
                     </div>
                    <div class="col-md-3 mb-3 mb-sm-3 mb-lg-0">
@@ -127,15 +127,15 @@
             <option value="">Select a Category</option>
             @if ($newCategories->isNotEmpty())
                 @foreach ($newCategories as $category)
-                    <option value="{{ $category->id }}">{{ $category->name }}</option>  
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
                 @endforeach
             @endif
         </select>
-     
+
     </div>
 </div>
 
-                    
+
                     <div class=" col-md-3 mb-xs-3 mb-sm-3 mb-lg-0">
                         <div class="d-grid gap-2">
                             {{-- <a href="jobs.html" class="btn btn-primary btn-block">Search</a> --}}
@@ -143,10 +143,10 @@
                                 <i class="fas fa-search"></i> Search
                             </button>
                                                     </div>
-                        
+
                     </div>
-                </div> 
-            </form>           
+                </div>
+            </form>
         </div>
     </div>
 </section>
@@ -163,8 +163,8 @@
                     <a href="{{ route('jobs').'?category='.$category->id }}"><h4 class="pb-2">{{ $category->name }}</h4></a>
                     <p class="mb-0"> <span><i class="fas fa-user"></i> 0</span> Available position</p>
                 </div>
-            </div> 
-            @endforeach                
+            </div>
+            @endforeach
             @endif
         </div>
     </div>
@@ -174,7 +174,7 @@
     <div class="container">
         <h2>Featured Jobs</h2>
         <div class="row pt-5">
-            <div class="job_listing_area">                    
+            <div class="job_listing_area">
                 <div class="job_lists">
                     <div class="row">
                         @if ($featuredJobs->isNotEmpty())
@@ -183,7 +183,7 @@
                                 <div class="card border-0 p-3 shadow mb-4">
                                     <div class="card-body">
                                         <h3 class="border-0 fs-5 pb-2 mb-0">{{ $featuredJob->title }}</h3>
-                                        
+
                                         <p>{{ Str::words(strip_tags($featuredJob->description), 5) }}</p>
 
                                         <div class="bg-light p-3 border">
@@ -200,9 +200,9 @@
                                                 <span class="fw-bolder"><i class="fa fa-usd"></i></span>
                                                 <span class="ps-1">{{ $featuredJob->salary }}</span>
                                             </p>
-                                            @endif                                            
+                                            @endif
                                         </div>
-    
+
                                         <div class="d-grid mt-3">
                                             <a href="{{ route('jobDetail', $featuredJob->id) }}" class="btn btn-primary btn-lg">
                                                 <i class="fas fa-info-circle"></i> Details
@@ -224,7 +224,7 @@
     <div class="container">
         <h2>Latest Jobs</h2>
         <div class="row pt-5">
-            <div class="job_listing_area">                    
+            <div class="job_listing_area">
                 <div class="job_lists">
                     <div class="row">
                         @if ($latestJobs->isNotEmpty())
@@ -233,7 +233,7 @@
                                 <div class="card border-0 p-3 shadow mb-4">
                                     <div class="card-body">
                                         <h3 class="border-0 fs-5 pb-2 mb-0">{{ $latestJob->title }}</h3>
-                                        
+
                                         <p>{{ Str::words(strip_tags($latestJob->description), 5) }}</p>
 
                                         <div class="bg-light p-3 border">
@@ -250,9 +250,9 @@
                                                 <span class="fw-bolder"><i class="fa fa-usd"></i></span>
                                                 <span class="ps-1">{{ $latestJob->salary }}</span>
                                             </p>
-                                            @endif                                            
+                                            @endif
                                         </div>
-    
+
                                         <div class="d-grid mt-3">
                                             <a href="{{ route('jobDetail',$latestJob->id) }}" class="btn btn-primary btn-lg">Details</a>
                                         </div>
@@ -260,7 +260,7 @@
                                 </div>
                             </div>
                             @endforeach
-                        @endif                                                 
+                        @endif
                     </div>
                 </div>
             </div>
