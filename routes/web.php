@@ -11,6 +11,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JobsController;
 use App\Http\Controllers\PrivacyPolicyController;
 use App\Http\Controllers\PrivateController;
+use App\Http\Controllers\TermsandConditionsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,6 +40,7 @@ Route::get('/privacypolicy',[PrivacyPolicyController::class,'privacypolicy'])->n
 Route::get('/private',[PrivateController::class,'private'])->name('private');
 Route::get('/forgot-password',[AccountController::class,'forgotPassword'])->name('account.forgotPassword');
 Route::post('/processforgot-password',[AccountController::class,'processForgotPassword'])->name('account.processForgotPassword');
+Route::get('/TermsandConditions',[TermsandConditionsController::class,'TermsandConditions' ])->name('TermsandConditions');
 
 
 
