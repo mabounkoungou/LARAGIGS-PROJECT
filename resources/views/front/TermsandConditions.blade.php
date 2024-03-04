@@ -12,6 +12,8 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
     <link href="css/custom.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="{{ asset('assets/fav/favicon.png') }}" type="image/x-icon">
+
 
 
     <meta property="og:type" content="website" />
