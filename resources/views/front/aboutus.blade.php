@@ -244,7 +244,7 @@ a:hover, a:active {
 											</li>
 					<li class="nav-item">
 						<a class="btn btn-primary" aria-current="page" href="{{ route('jobs') }}"  style="margin-right: 5px;">
-							<i class="fas fa-search"></i> Find Jobs
+							<i class="fas fa-search"></i> Find Job
 						</a>
 											</li>
 											<li class="nav-item">
