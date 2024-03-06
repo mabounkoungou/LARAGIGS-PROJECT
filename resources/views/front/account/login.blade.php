@@ -47,12 +47,7 @@
                     </form>
                 </div>
                 <br>
-                <div class="google">
-
-                                      <button class="btn btn-primary" style="width: 100%; background-color: hsla(172, 80%, 15%, 0.897);"><span><i class="fab fa-google" style="color: #4285F4; font-size: 24px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);"></i>
-                                      </span>Login With Google</button>
-
-                </div>
+                
                 <div class="mt-4 text-center">
                     <p>Do not have an account? <a  href="{{ route('account.registration') }}">Register</a></p>
                 </div>
