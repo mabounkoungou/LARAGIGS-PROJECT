@@ -8,7 +8,7 @@
                 <nav aria-label="breadcrumb" class=" rounded-3 p-3 mb-4">
                     <ol class="breadcrumb mb-0">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Account Settings</li>
+                        <li class="breadcrumb-item active">Accounts Settings</li>
                     </ol>
                 </nav>
             </div>
@@ -20,8 +20,8 @@
             <div class="col-lg-9">
                 @include('front.message')
                 <div class="card border-0 shadow mb-4">
-                   
-                </div>                          
+
+                </div>
             </div>
         </div>
     </div>
