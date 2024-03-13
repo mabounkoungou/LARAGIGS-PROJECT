@@ -39,7 +39,10 @@ Route::get('/contactus/contactus',[ContactUsController::class,'contactus'])->nam
 Route::get('/privacypolicy',[PrivacyPolicyController::class,'privacypolicy'])->name('privacypolicy');
 Route::get('/private',[PrivateController::class,'private'])->name('private');
 Route::get('/forgot-password',[AccountController::class,'forgotPassword'])->name('account.forgotPassword');
-Route::post('/processforgot-password',[AccountController::class,'processForgotPassword'])->name('account.processForgotPassword');
+Route::post('/process-forgot-password',[AccountController::class,'processForgotPassword'])->name('account.processForgotPassword');
+Route::get('/reset-password/{token}',[AccountController::class,'resetPassword'])->name('account.resetPassword');
+Route::post('/process-reset-password',[AccountController::class,'processResetPassword'])->name('account.processResetPassword');
+
 Route::get('/TermsandConditions',[TermsandConditionsController::class,'TermsandConditions' ])->name('TermsandConditions');
 
 

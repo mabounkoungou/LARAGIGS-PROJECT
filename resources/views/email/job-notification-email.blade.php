@@ -8,11 +8,11 @@
 </head>
 <body>
     <h1>Hello {{ $mailData['employer']->name }}</h1>
-    
+
     <p>Job Title: {{ $mailData['job']->title  }}</p>
 
     <p>Employee Details:</p>
-    
+
     <p>Name: {{ $mailData['user']->name }}</p>
     <p>Email: {{ $mailData['user']->email }}</p>
     <p>Mobile No: {{ $mailData['user']->mobile }}</p>
