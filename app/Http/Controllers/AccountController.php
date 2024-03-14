@@ -486,7 +486,7 @@ class AccountController extends Controller
         $mailData =  [
             'token' => $token,
             'user' => $user,
-            'subject' => 'You have requested to change your password.'
+            'subject' => 'Request to change password.'
         ];
 
         Mail::to($request->email)->send(new ResetPasswordEmail($mailData));

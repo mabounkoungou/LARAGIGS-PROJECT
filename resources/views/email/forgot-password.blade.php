@@ -42,6 +42,7 @@
         a:hover {
             background-color: hsla(172, 80%, 15%, 0.897);
         }
+        
     </style>
 </head>
 <body>
