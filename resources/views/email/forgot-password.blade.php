@@ -12,31 +12,35 @@
             margin: 0;
             padding: 0;
             color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         .container {
             max-width: 600px;
-            margin: 20px auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
         h1 {
-            color: #007bff;
+            color: hsla(172, 80%, 15%, 0.897);
         }
         p {
             margin-bottom: 20px;
         }
         a {
             display: inline-block;
-            background-color: #007bff;
+            background-color: hsla(172, 80%, 15%, 0.897);
             color: #fff;
             text-decoration: none;
             padding: 10px 20px;
             border-radius: 5px;
         }
         a:hover {
-            background-color: #0056b3;
+            background-color: hsla(172, 80%, 15%, 0.897);
         }
     </style>
 </head>
